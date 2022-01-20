@@ -22,3 +22,14 @@ MESMA PÁGINA, LOGO NÃO FUNCIONARIA SEM A Route::post
 
 Route::post('/series/criar', 'SeriesController@store');
 Route::delete('/series/{id}', 'SeriesController@destroy');
+Route::post('/series/{id}/editaNome', 'SeriesController@editaNome');
+
+Route::get('/series/{serieId}/temporadas', 'TemporadasController@index');
+Route::get('/temporadas/{temporada}/episodios', 'EpisodiosController@index');
+Route::post('/temporadas/{temporada}/episodios/assistir', 'EpisodiosController@assistir');
+
+Route::get('/entrar', 'EntrarController@index');
+Route::post('/entrar', 'EntrarController@entrar');
+
+Route::get('/registrar', 'RegistroController@create');
+Route::post('/registrar', 'RegistroController@store');

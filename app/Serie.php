@@ -6,7 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 //Tabela series
 
-class Serie extends Model { 
+class Serie extends Model 
+{ 
     public $timestamps = false;
     protected $fillable = ['nome'];
 
