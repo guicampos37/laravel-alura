@@ -11,6 +11,19 @@
 </head>
 
 <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light mb-2 justify-content-between">
+        <a class="navbar-brand" href="{{ route('listar_series') }}">Home</a>
+        {{-- @auth Verifica se o usuário está logado, se sim, ele exibirá o botão de sair --}}
+        @auth
+        <a href="/sair" class="text-danger">Sair</a>
+        @endauth
+
+        {{-- @guest Verifica se o usuário está deslogado, se sim, ele exibirá o botão de entrar --}}
+        @guest
+        <a href="/entrar">Entrar</a>
+        @endguest
+    </nav>
+
     <div class="container">
 
         {{-- h1 da Página --}}
